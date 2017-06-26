@@ -1,0 +1,18 @@
+db_table_link = thing, !typeid=3
+db_table_account = thing, !typeid=2
+db_table_message = thing, !typeid=4
+db_table_comment = thing, !typeid=1
+db_table_subreddit = thing, !typeid=5
+db_table_srmember = relation, subreddit, account, !typeid=9
+db_table_friend = relation, account, account, !typeid=10
+db_table_inbox_account_comment = relation, account, comment, !typeid=11
+db_table_inbox_account_message = relation, account, message, !typeid=12
+db_table_moderatorinbox = relation, subreddit, message, !typeid=13
+db_table_report_account_link = relation, account, link, !typeid=14
+db_table_report_account_comment = relation, account, comment, !typeid=15
+db_table_report_account_message = relation, account, message, !typeid=16
+db_table_report_account_subreddit = relation, account, subreddit, !typeid=17
+db_table_award = thing, !typeid=6
+db_table_trophy = relation, account, award, !typeid=18
+db_table_flair = relation, subreddit, account, !typeid=19
+db_table_promocampaign = thing, !typeid=8
