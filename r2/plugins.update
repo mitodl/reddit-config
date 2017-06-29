@@ -1,0 +1,7 @@
+[DEFAULT]
+
+# patch the image resizer setting
+image_resizing_provider = no_op2
+
+plugins = refresh_token
+#plugins = refresh_token,no_op2_resizer

@@ -15,14 +15,9 @@ disable_require_admin_otp = true
 domain = ""
 oauth_domain = ""
 
-plugins = ""
-
 media_provider = filesystem
 media_fs_root = /srv/www/media
 media_fs_base_url_http = http://%(domain)s/media/
-
-[server:main]
-port = 8001
 
 db_table_link = thing, !typeid=3
 db_table_account = thing, !typeid=2
@@ -42,3 +37,7 @@ db_table_award = thing, !typeid=6
 db_table_trophy = relation, account, award, !typeid=18
 db_table_flair = relation, subreddit, account, !typeid=19
 db_table_promocampaign = thing, !typeid=8
+
+
+[server:main]
+port = 8001
