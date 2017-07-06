@@ -37,7 +37,7 @@ Vagrant.configure(2) do |config|
         popd
       }
 
-      setup_reddit_ext src/reddit_no_op2_resizer
+      setup_reddit_ext src/no_op2_resizer
       setup_reddit_ext src/refresh_token
     SCRIPT
 
