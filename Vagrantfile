@@ -48,5 +48,14 @@ Vagrant.configure(2) do |config|
       python updateini.py development.old.ini plugins.update > development.ini
       sudo reddit-restart
     SCRIPT
+
+    redditlocal.vm.provision "file", source: "r2/local.update", destination: "~/src/reddit/r2/local.update"
+
+    redditlocal.vm.provision "shell", inline: <<-SCRIPT
+      cd src/reddit/r2
+      mv development.ini development.old.ini
+      python updateini.py development.old.ini local.update > development.ini
+      sudo reddit-restart
+    SCRIPT
   end
 end
