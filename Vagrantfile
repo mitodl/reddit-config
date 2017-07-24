@@ -10,6 +10,7 @@ Vagrant.configure(2) do |config|
     end
     # pre-setup
     redditlocal.vm.provision "file", source: "r2/development.update", destination: "~/src/reddit/r2/development.update"
+    redditlocal.vm.provision "shell", inline: "touch /var/local/test_data_injected"
   end
 end
 
