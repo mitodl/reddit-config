@@ -10,11 +10,6 @@ NOTE: It may be helpful to create a directory that is separate from your normal 
     is provisioned, all of the repositories at the same directory level as the main
     reddit repository will be available within the Vagrant VM.
 
-1. Add the `reddit.local` hostname to your `/etc/hosts` file. The IP of the Vagrant 
-   VM is `192.168.56.111` by default, so the line to add will most likely be:
-   
-   `192.168.56.111  reddit.local`
-
 1. Clone the necessary repositories and make sure `reddit` has the `stable` branch checked
    out.
 
@@ -27,9 +22,28 @@ NOTE: It may be helpful to create a directory that is separate from your normal 
     cd reddit
     git checkout stable
     ```
-1. Create the `reddit-config` VM (`vagrant up`) if this is your first use, or reload
-   and provision on subsequent uses (`vagrant reload && vagrant provision`).
-   - The server is configured to run automatically upon VM creation/provisioning.
+    
+1. Create or reload/provision the `reddit-config` Vagrant VM.
+   - For first time setup:
+
+        ```bash
+        cd <reddit-config directory>
+        touch r2/local.update
+        vagrant up
+        ```
+       
+   - For subsequent uses:
+
+        ```bash
+        cd <reddit-config directory>
+        vagrant reload && vagrant provision
+        ```
+   - _NOTE: The server is configured to run automatically upon VM creation/provisioning._
+
+1. Add the `reddit.local` hostname to your `/etc/hosts` file. The IP of the Vagrant 
+   VM is `192.168.56.111` by default, so the line to add will most likely be:
+   
+   `192.168.56.111  reddit.local`
 
 1. Navigate to the site from the host machine: `http://reddit.local`.
    - It may take some time for the server to be ready to accept requests 
