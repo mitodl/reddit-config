@@ -75,13 +75,13 @@ Vagrant.configure(2) do |config|
 
     # render and upload create_api_user script
     redditlocal.vm.provision "file",
-      source: render_to_tmp("scripts/create_api_user.sh"),
-      destination: "/tmp/create_api_user.sh"
+      source: render_to_tmp("scripts/create_api_user.py"),
+      destination: "/tmp/create_api_user.py"
 
     # create the api user and app
     # the client id is statically base64 encoded in r2/post_setup.update as well
     redditlocal.vm.provision "shell",
-      inline: "/usr/local/bin/reddit-run /tmp/create_api_user.sh"
+      inline: "/usr/local/bin/reddit-run /tmp/create_api_user.py"
 
     # post-setup script (config update, plugin install, etc)
     redditlocal.vm.provision "shell",
