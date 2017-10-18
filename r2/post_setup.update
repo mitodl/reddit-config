@@ -1,0 +1,5 @@
+[DEFAULT]
+plugins = refresh_token
+
+[secrets]
+generate_refresh_token_client_id = <%= oauth_client_id_base64 %>

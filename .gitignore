@@ -1,4 +1,4 @@
 .vagrant/
 .idea/
 
-r2/local.update
+tmp/
