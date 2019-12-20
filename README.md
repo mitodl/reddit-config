@@ -47,6 +47,9 @@ NOTE: It may be helpful to create a directory that is separate from your normal 
    - It may take some time for the server to be ready to accept requests
      (~30 seconds in some cases), and the site will likely respond with a 503
      error before then.
+     
+1. Go to `http://reddit.local` and register a user with the username `reddit`. It may
+   give an error on registration, but the user should be created nonetheless.
 
 ### Troubleshooting
 
