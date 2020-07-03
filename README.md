@@ -47,6 +47,10 @@ NOTE: It may be helpful to create a directory that is separate from your normal 
    - It may take some time for the server to be ready to accept requests
      (~30 seconds in some cases), and the site will likely respond with a 503
      error before then.
+     
+1. Register a user with the username `reddit` at <http://reddit.local/login>.
+   - In order for anonymous access to the reddit instance to work via the API 
+     this user needs to be present.
 
 ### Troubleshooting
 
